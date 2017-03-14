@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'dist/js/magic.min.js': 'app/src/**/*.js'
+          'dist/js/magic.min.js': 'app/**/*.js'
         }
       }
     },
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         },
     }
   });
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify','copy']);
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');

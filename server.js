@@ -8,6 +8,10 @@ app.get('/', function (req, res) {
     res.redirect('/app/views/index.html');
 });
 
+app.get('/prod', function (req, res) {
+    res.redirect('/dist/app/views/main.html');
+});
+
 //Launching server
 app.listen(8080, function (req,res) {
   console.log("Opening port 8080");    
