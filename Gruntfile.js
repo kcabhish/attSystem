@@ -12,10 +12,20 @@ module.exports = function(grunt) {
           }
         }
     },
+    uglify: {
+      options: {
+        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+      },
+      build: {
+        files: {
+          'dist/js/magic.min.js': 'app/src/**/*.js'
+        }
+      }
+    },
     copy: {
         main: {
             expand: true,
-            src: 'views/*.html',
+            src: 'app/views/*.html',
             dest: 'dist/',
           }
     },
@@ -57,7 +67,7 @@ module.exports = function(grunt) {
         },
     }
   });
-  grunt.registerTask('default', ['less','cssmin','copy','express:dev']);
+  grunt.registerTask('default', ['uglify']);
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
