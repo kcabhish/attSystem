@@ -2,8 +2,10 @@
 <html>
     <head>
         <title>Angular Project 2</title>
+        <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
     </head>
     <body ng-app="attendance">
+        
         <h1>Angular Project 2</h1>
         <div ng-controller="mainCtrl">
             From Main Controller->{{testString}}
@@ -14,6 +16,15 @@
         
         <!--Dependencies-->
         <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        
+        <script type="text/javascript" src="/node_modules/angular-aria/angular-aria.js">
+        </script>
+        
+        <script type="text/javascript" src="/node_modules/angular-animate/angular-animate.js"></script>
+        
+        <script type="text/javascript" src="/node_modules/angular-material/angular-material.js"></script>
+        
+        <!--Custom Javascripts-->
         <script type="text/javascript" src="/app/scripts/attendance.js"></script>
         <script type="text/javascript" src="/app/scripts/controllers/mainCtrl.js"></script>
         <script type="text/javascript" src="/app/scripts/controllers/personCtrl.js"></script>
