@@ -10,6 +10,7 @@
         <div ng-controller="mainCtrl">
             <password ng-if="!auth"></password>
             <student-form ng-if="auth"></student-form>
+            <student-table></student-table>
         </div>
         
          
@@ -35,7 +36,8 @@
         <script type="text/javascript" src="/app/scripts/controllers/passwordCtrl.js">
         </script>
         <script type="text/javascript" src="/app/scripts/controllers/studentFormCtrl.js"></script>
-        
+        <script type="text/javascript" src="/app/scripts/controllers/studentTableCtrl.js">
+        </script>
         <!--services-->
         <script type="text/javascript" src="/app/scripts/services/passwordService.js"></script>
         <script type="text/javascript" src="/app/scripts/services/studentService.js">
@@ -44,6 +46,7 @@
         <!--directives-->
         <script type="text/javascript" src="/app/scripts/directives/password.js"></script>
         <script type="text/javascript" src="/app/scripts/directives/studentForm.js"></script>
+        <script type="text/javascript" src="/app/scripts/directives/studentTable.js"></script>
     </body>
     
 </html>
