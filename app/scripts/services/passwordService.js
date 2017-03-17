@@ -2,7 +2,7 @@
 angular.module("attendance").service("passwordService",[function(){
     var _this=this;
     this.auth = false;
-    
+    this.loggedUser={};
     
     var passwordModel={
         "username":"",
@@ -12,13 +12,22 @@ angular.module("attendance").service("passwordService",[function(){
     var validUser=[
         {
             "username":"cat",
-            "password":"123"
+            "password":"123",
+            "cred":2  //1 is for admin 2 is for others
         },{
-            "username":"test",
-            "password":"123"
+            "username":"con",
+            "password":"123",
+            "cred":2
+        },{
+            "username":"admin",
+            "password":"123",
+            "cred":1
         }
     ];
-    this.logout=()=>_this.auth = false;
+    this.logout=()=>{
+        _this.auth = false;
+        _this.loggedUser = {}
+    }
     //Function to validate the user
     this.validateUser=()=>{
         for(let i =0;i<validUser.length;i++){
@@ -27,6 +36,7 @@ angular.module("attendance").service("passwordService",[function(){
                 validUser[i].password==passwordModel.password
                ){
                 _this.auth = true;
+                _this.loggedUser = validUser[i];
                 break;
             }
         }
