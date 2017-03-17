@@ -1,2 +1,99 @@
-<h1>Hello World</h1>
-<md-button ng-click="logout()">logout</md-button>
+<div class="form-wrapper">
+    <form name="student-form" layout="column">
+    <md-input-container>
+        <input flex="25"
+               type="text" 
+               name="firstName"
+               ng-model="studentFormModel.firstName"
+               md-input
+               required
+               placeholder="Enter First Name">
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="text" 
+               name="lastName"
+               ng-model="studentFormModel.lastName"
+               md-input
+               required
+               placeholder="Enter Last Name">
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="text" 
+               name="phone"
+               ng-model="studentFormModel.phone"
+               md-input
+               required
+               placeholder="Enter phone">
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="email" 
+               name="email"
+               ng-model="studentFormModel.email"
+               md-input
+               required
+               placeholder="Enter email">
+    </md-input-container>
+    <div layout="column">
+        <label>Select a gender : </label>
+        <md-radio-group ng-model="studentFormModel.gender" layout="row">
+            <md-radio-button value="male"> Male </md-radio-button>
+            <md-radio-button value="female"> Female </md-radio-button>
+            <md-radio-button value="other">other</md-radio-button>
+        </md-radio-group>
+    </div>
+    <md-input-container>
+        <input flex="25"
+               type="text"
+               name="gitUser"
+               ng-model="studentFormModel.gitUserName"
+               placeholder="Enter GIT username">
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="date"
+               name="dob"
+               ng-model="studentFormModel.dob"
+               placeholder="Enter date of birth"
+               required>
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="text"
+               name="address"
+               ng-model="studentFormModel.address"
+               placeholder="Enter address"
+               required>
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="text"
+               name="city"
+               ng-model="studentFormModel.zip"
+               placeholder="Enter zip"
+               required>
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="text"
+               name="city"
+               ng-model="studentFormModel.city"
+               placeholder="Enter city"
+               required>
+    </md-input-container>
+    <md-input-container>
+        <input flex="25"
+               type="text"
+               name="state"
+               ng-model="studentFormModel.state"
+               placeholder="Enter state"
+               required>
+    </md-input-container>
+    <div flex="25">
+        <md-button ng-click="submit()" class="md-raised md-primary">Submit</md-button>    
+    </div>
+    
+</form>
+</div>
