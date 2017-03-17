@@ -2,6 +2,7 @@
 angular.module("attendance").directive("appBody",[function(){
     return{
         restrict:"EA",
-        templateUrl:"/app/views/body.html"
+        templateUrl:"/app/views/body.html",
+        controller:"appBodyCtrl"
     }
 }]);

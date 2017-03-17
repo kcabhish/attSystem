@@ -4,7 +4,8 @@ angular.module("attendance")
     $scope.submit=function(){
         console.log($scope.studentFormModel);
         ss.addStudent($scope.studentFormModel);
+        
         //Resetting the form contents
-        $scope.studentFormModel={};
+        $scope.studentFormModel=ss.studentModel;
     }
 }]);

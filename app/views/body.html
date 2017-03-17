@@ -1,5 +1,8 @@
 <div layout="column">
     <nav-bar></nav-bar>
-    <student-form></student-form>
-    <student-table></student-table>
+    <div ng-if="id==1">
+        Some random shit goes here
+    </div>
+    <student-form ng-if="id==2"></student-form>
+    <student-table ng-if="id==3"></student-table>
 </div>
