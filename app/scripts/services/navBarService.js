@@ -1,7 +1,7 @@
 "use strict";
 angular.module("attendance").service("navBarService",["passwordService",function(ps){
-    this.test="test";
-    this.navBarList=[
+
+    var navBarList=[
         {
             "title":"Home",
             "id":1,
