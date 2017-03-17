@@ -14,4 +14,27 @@
 .form-wrapper{
     margin-left:200px;
 }
+.tbl-head{
+    background-color:cadetblue;
+    font-size:25px;
+    padding:10px;
+    color:white;
+}
+#nav-bar{
+    background-color:cadetblue;
+    color:white;
+    border-bottom:solid;
+    border-bottom-color:black;
+    font-size:30px;
+    display:flex;
+}
+#nav-bar span{
+    margin-right:15px;
+    padding:15px;
+}
+#nav-bar span:hover{
+    background-color:cyan;
+    color:black;
+    cursor:pointer;
+}
 

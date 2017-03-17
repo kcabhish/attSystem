@@ -1,1 +1,18 @@
-<h1>Student Table information goes here</h1>
+<div layout="column">
+    <div layout="row" class="tbl-head">
+        <div flex="15">Name</div>
+        <div flex="15">DOB</div>
+        <div flex="15">Phone</div>
+        <div flex="15">Email</div>
+        <div flex="15">Git</div>
+        <div flex="15">Address</div>
+    </div>
+    <div layout="row" ng-repeat="student in studentList track by $index">
+        <div flex="15">{{student.lastName}}, {{student.firstName}}</div>
+        <div flex="15">{{student.dob}}</div>
+        <div flex="15">{{student.phone}}</div>
+        <div flex="15">{{student.email}}</div>
+        <div flex="15">{{student.gitUserName}}</div>
+        <div flex="15">{{student.address}}, {{student.zip}}, {{student.city}}, {{student.state}}</div>
+    </div>
+</div>
